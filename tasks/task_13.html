@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 13</h1>
+					<p>
+						13. Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів користувач намагається потопити корабель.
+					</p>
+				</section>
+				<script>
+					const minNumber = parseInt(prompt('Введіть мінімальне число диапазону'))
+					const maxNumber = parseInt(prompt('Введіть максимальне число диапазону'))
+					const N = minNumber + Math.floor(Math.random() * (maxNumber - minNumber) + minNumber)
+					const M = minNumber + Math.floor(Math.random() * (maxNumber - minNumber) + minNumber)
+					const K = parseInt(prompt('Введіть кількість снарядів'))
+					for (let i = 0; i < K; i++) {
+						const userShotX = parseInt(prompt('Введіть значення для осі Х'))
+						const userShotY = parseInt(prompt('Введіть значення для осі Y'))
+						if (N === userShotX && M === userShotY) {
+							alert("корабель потоплений")
+							break
+						}
+						else alert (`Не влучили`)
+					}
+					</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

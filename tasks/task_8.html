@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 5</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 8</h1>
+					<p>
+						Задача 8. Користувач загадує число (від 0 до 100). За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).
+					</p>
+				</section>
+				<script>
+        const userGuessNumber = parseInt(
+          alert(
+            "Загадайте число від 1 до 100. Комп’ютер має три спроби, щоб вгадати його"
+          )
+        );
+
+        for (let i = 1; i <= 3; i++) {
+          let randomNumber = 1 + Math.floor(Math.random() * (100 - 1 + 1));
+          let ComputerUnswer = confirm(`Це число ${randomNumber} ?`);
+          if (ComputerUnswer) {
+            document.write(`Комп’ютер вгадав. Це число ${randomNumber}`);
+            break;
+          }
+          if (i === 3) alert("Нажаль спроби закінчились");
+        }
+      
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

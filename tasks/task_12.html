@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 12</h1>
+					<p>
+						Задача 12. Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).
+					</p>
+				</section>
+				<script>
+					const firstImageIndex = Math.floor(1 + Math.random() * 4),
+			secondImageIndex = Math.floor(1 + Math.random() * 4),
+			thirdImageIndex = Math.floor(1 + Math.random() * 4)
+
+		let images = ''
+
+		/* Використовуємо цикл */
+		for (let i = 0; i < 3; i++) {
+			let indexImage
+			switch (i) {
+				case 0:
+					indexImage = firstImageIndex
+					break
+				case 1:
+					indexImage = secondImageIndex
+					break
+				case 2:
+					indexImage = thirdImageIndex
+					break
+			}
+			images = images + `<div><img width=100px src="../tasks/img/${indexImage}.png" alt=""></div>`
+		}
+
+		// Знаходимо виграш користувача
+		let winUserAmount = 0
+		if (firstImageIndex === secondImageIndex && firstImageIndex === thirdImageIndex) {
+			switch (firstImageIndex) {
+				case 1:
+					winUserAmount = `${100} грн`
+					break
+				case 2:
+					winUserAmount = `${200} грн`
+					break
+				case 3:
+					winUserAmount = `${500} грн`
+					break
+				case 4:
+					winUserAmount = `${1000} грн`
+					break
+			}
+		} else winUserAmount = 'Ви нічого не виграли'
+
+		// Виводимо результат в HTML
+		document.write(`
+					<div>Ваш виграш</div>
+					<div>${winUserAmount}</div>
+			<p>
+				${images}
+			</p>
+		`)
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

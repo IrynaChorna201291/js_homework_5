@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Lesson 5</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 6</h1>
+					<p>
+						Задача 6. Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+					</p>
+				</section>
+				<script>
+					const quantityRows = 3,
+					quantityColumns = 3,
+					quantityTables = 3
+					let counter = 1 
+					document.write(`<div class="tables">`)
+for (let table = 0; table < quantityTables; table++) {
+					document.write(`<table border="2px">`)
+						for (let tr = 0; tr < quantityRows; tr++) {
+document.write(`<tr>`)	
+	for (let td = 0; td < quantityColumns; td++) {
+document.write(`<td>${counter}</td>`)	
+counter++	
+	}	
+	document.write(`</tr>`)					
+						}
+						document.write(`</table>`)	
+}
+					document.write(`</div>`)
+
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

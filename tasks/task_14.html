@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 14</h1>
+					<p>
+						14. Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести).
+					</p>
+				</section>
+				<script>
+					let totalSum = 100
+					const amountPayment = alert('Вам потрібно сплатити 100 грн')
+					do {
+						let userPay = parseFloat(prompt('До сплати 100 грн. Яку суму вносите?'))
+totalSum = totalSum - userPay
+					} while (totalSum > 0);
+					if (totalSum === 0)
+					 document.write('Ви внесли всю суму')
+					 else (document.write(`ви переплатили ${-totalSum} грн`))
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lesson 3</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<section class="main__page block-main">
+					<h1>Task 5</h1>
+					<p>
+						Задача 5. Вивести таблицю
+					</p>
+				</section>
+				<script>
+				const quantityRows = 3,
+				quantityColumns = 3
+				document.write(`
+				<table border = "2px">`)
+					let counter = 1
+					for (let i = 1; i <= quantityRows; i++) {
+						document.write(`<tr>`)
+						for (let j = 1; j <= quantityColumns; j++) {
+							document.write(`<td>${counter}</td>`)
+							counter++
+						}
+						document.write(`</tr>`)
+					}
+				document.write(`</table>`)
+				</script>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>
